@@ -12,5 +12,6 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
     $myArray[] = $row;
 }
 $_SESSION['result'] = json_encode($myArray);
+$_SESSION['query'] =$_GET['query'];
 header("location:index.php");
   ?>
